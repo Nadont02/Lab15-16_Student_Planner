@@ -62,11 +62,11 @@ fun ProfileScreen(
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(
-                        text = "Иванов Иван Иванович",
+                        text = "Дунюшкин Н.С",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold)
                     Text(
-                        text = "Группа: ИСП-234",
+                        text = "Группа: ИСП-233",
                         style = MaterialTheme.typography.titleMedium,
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
@@ -87,7 +87,7 @@ fun ProfileScreen(
                     ProfileInfoRow(
                         icon = Icons.Default.Email,
                         label = "Email",
-                        value = "ivanov@vgi.volsu.ru"
+                        value = "dunyushkin@vgi.volsu.ru"
                     )
                     HorizontalDivider()
                     ProfileInfoRow(
@@ -104,7 +104,7 @@ fun ProfileScreen(
                 ) {
                     Text(
                         text = "Академическая успеваемость",
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold
                     )
                     Spacer(modifier = Modifier.height(16.dp))
