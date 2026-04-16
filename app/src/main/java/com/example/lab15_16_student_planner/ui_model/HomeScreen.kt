@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
@@ -83,12 +84,20 @@ fun HomeScreen(
     onSubjectClick:(String) -> Unit,
     onProfileClick:() -> Unit,
     onSettingsClick: () -> Unit,
+    onScheduleClick: () -> Unit,
     modifier: Modifier = Modifier){
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text("Мои дисциплины") },
                 actions = {
+                    IconButton(onClick = onScheduleClick) {
+                        Icon(
+                            imageVector = Icons.Default.DateRange,
+                            contentDescription = "Расписание"
+                        )
+                    }
+
                     IconButton(onClick = onProfileClick) {
                         Icon(
                             imageVector = Icons.Default.Person,

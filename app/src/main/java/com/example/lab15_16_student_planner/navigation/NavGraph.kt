@@ -29,6 +29,9 @@ fun StudentPlannerNavHost(
                 },
                 onSettingsClick = {
                     navController.navigate(Screen.Settings.route)
+                },
+                onScheduleClick = {
+                    navController.navigate(Screen.Schedule.route)
                 }
             )
         }
@@ -62,6 +65,17 @@ fun StudentPlannerNavHost(
             SettingsScreen(
                 onNavigateBack = {
                     navController.popBackStack()
+                }
+            )
+        }
+
+        composable(route = Screen.Schedule.route) {
+            RaspisScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                },
+                onSubjectClick = { subjectId ->
+                    navController.navigate(Screen.Details.createRoute(subjectId))
                 }
             )
         }
